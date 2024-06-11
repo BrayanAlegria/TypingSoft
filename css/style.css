@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    padding: 90px 20px 0;
+}
+
+.header {
+    background-color: rgba(232,243,249,255);
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto; 
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+    color: rgba(3,3,149,255);
+    font-family: 'Manrope', sans-serif;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none; 
+}
+
+.nav-menu-item {
+    font-size: 15px;
+    margin: 0 10px; 
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-menu-link {
+    padding: 8px 12px; 
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold; /* Añade esta línea para hacer el texto en negritas */
+    font-family: 'Manrope', sans-serif;
+}
+
+.nav-menu-link:hover {
+    background-color: rgba(255,255,255,255); 
+    color: blue; 
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none; 
+    font-size: 30px; 
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+
+    display: none; 
+}
+
+.contact-button { 
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 2px solid red; 
+    background-color: red;
+    transition: background-color 0.3s, color 0.3s; 
+    color: white; 
+    font-weight: bold; /* Añade esta línea para hacer el texto en negritas */
+    font-family: 'Manrope', sans-serif;
+}
+
+.swiper-button-prev::after {
+    font-size: 25px;
+}
+
+.swiper-button-next::after {
+    font-size: 25px;
+}
+
+.swiper-button-next {
+    color: #DB241B;
+}
+
+.swiper-button-prev {
+    color: #DB241B;
+}
+
+.swiper-pagination-bullet {
+    background-color: #D3D2D2;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #DB241B;
+}
+
+.swiper-slide {
+    position: relative; 
+    width: 100%; 
+    height: 100vh; 
+}
+
+.slider-img img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.slider-text {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+.botones {
+    margin-top: 20px;
+}
+
+.btn-1 {
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    body{ 
+        padding-top: 70px;
+    }
+    
+    .header {
+        height: 60px;
+    }
+    
+    .logo {
+        font-size: 25px;
+        font-weight: bold;
+        padding: 0 20px;
+        line-height: 60px;
+        color: black; 
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 20px;
+        background-color: white;
+        position: fixed;
+        left: 0;
+        top: 60px; 
+        width: 100%; 
+        padding: 20px 0; 
+
+        height: calc(100% - 60px);
+        overflow-y: auto;
+
+        left: 100%;
+        transition: left 0.4s; 
+    }
+    
+    .nav-menu-item {
+        font-size: 18px;
+        margin: 0 10px; 
+        line-height: 70px;
+        text-transform: uppercase;
+        width: max-content;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active{
+        background: none;
+        color: black;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu_visible {
+        left: 0; 
+    }
+
+    .nav-toggle:focus:not( :focus-visible){
+        outline: none;
+    }
+    
+    .contact-button { 
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: 2px solid red; 
+        background-color: red;
+        transition: background-color 0.3s, color 0.3s; 
+        color: white; 
+        font-weight: bold; 
+        font-family: 'Manrope', sans-serif;
+    }
+}

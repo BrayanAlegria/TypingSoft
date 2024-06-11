@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.typewriter-text {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.scroll-down-btn {
+    position: absolute;
+    bottom: 30px;
+    cursor: pointer;
+    color: white;
+}
